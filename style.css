@@ -1,0 +1,8 @@
+body {
+    margin-top: 20px;
+}
+
+body > div {
+    display: inline-block;
+    font-size: 20px;
+}
