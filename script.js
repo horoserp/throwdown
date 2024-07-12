@@ -1,7 +1,5 @@
 let myID = "";
 
-//TODO: How to handle BGE and Show
-
 const csv = `name,character,bge,skill1,skill1Value,skill2,skill2Value,skill3,skill3Value,rarity,attack,health,imgSource
 Greande Amy,Amy,Armed,Payback,27,heal,30,Leech,27,Legendary,0,0,-
 Ray Gun Rifle Amy,Amy,Armed,Bodyguard,27,Sturdy,26,Criple,31,Legendary,0,0,-
@@ -160,9 +158,11 @@ function filterByProperty(id) {
 
 function hasValue(combo) {
     return Object.values(combo).includes(
-        // document.getElementById(myID).value.charAt(0).toUpperCase() +
-        // document.getElementById(myID).value.slice(1)
         document.getElementById(myID).value
+    ) || Object.values(combo).includes(
+        document.getElementById(myID).value + " BGE"
+    ) || Object.values(combo).includes(
+        document.getElementById(myID).value + " Show"
     );
 }
 
