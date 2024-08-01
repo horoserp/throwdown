@@ -173,6 +173,7 @@ function displayCombo(comboArray) {
         for (value in combo) {
             toDisplay += combo[value] + "<br>";
         }
+        toDisplay += "<br>";
     }
     if (toDisplay === "") {
         document.getElementById("result").innerHTML = "There are no combos that " +
